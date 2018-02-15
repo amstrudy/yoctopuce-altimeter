@@ -2,10 +2,10 @@
 #include <iostream>
 #include <ros/ros.h>
 #include <nav_msgs/Odometry.h>
-#include "/home/anjasheppard/VirtualHub/Cpp_API/Sources/yocto_altitude.h"
-#include "/home/anjasheppard/VirtualHub/Cpp_API/Sources/yocto_api.h"
-#include "/home/anjasheppard/VirtualHub/Cpp_API/Sources/yocto_genericsensor.h"
-#include "/home/anjasheppard/VirtualHub/Cpp_API/Sources/yocto_temperature.h"
+#include "../include/yocto/yocto_api/yocto_altitude.h"
+#include "../include/yocto/yocto_api/yocto_api.h"
+#include "../include/yocto/yocto_api/yocto_genericsensor.h"
+#include "../include/yocto/yocto_api/yocto_temperature.h"
 #include <yoctopuce_altimeter/yocto_msg.h>
 
 int main (int argc, char *argv[])
