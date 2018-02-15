@@ -13,4 +13,4 @@ Make sure to source ROS:
 `source /opt/ros/kinetic/setup.bash`
 
 Then, to make sure the yocto API is accessible during runtime:
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/yocto/cpp/api/Binaries/linux/64bits
+`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/yocto/cpp/api/Binaries/linux/64bits`
