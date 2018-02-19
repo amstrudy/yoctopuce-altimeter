@@ -54,16 +54,18 @@ int main (int argc, char *argv[])
 			break;
 		}
 
-		float alt = asensor->get_currentValue(); // m
-		float pressure = asensor->get_qnh(); // hPa
-		float temp = tsensor->get_currentValue(); // C
+		double alt = asensor->get_currentValue(); // m
+		double pressure = asensor->get_qnh(); // hPa
+		double temp = tsensor->get_currentValue(); // C
 
-		yoctopuce_altimeter::yocto_msg raw_msg; // how to import custom message??
+		yoctopuce_altimeter::yocto_msg raw_msg;
 		nav_msgs::Odometry odom;
 
 		raw_msg.header.frame_id = "base_link";
 		raw_msg.altitude = alt;
-		raw_msg.pressure = pressure;
+		raw_msg.pressure.header.frame_id = "base_link";
+		raw_msg.pressure.fluid_pressure = pressure;
+		raw_msg.pressure.variance = 0;
 		raw_msg.temperature.header.frame_id = "base_link";
 		raw_msg.temperature.temperature = temp;
 		raw_msg.temperature.variance = 0;
