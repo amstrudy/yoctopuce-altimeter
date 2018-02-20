@@ -56,6 +56,7 @@ int main (int argc, char *argv[])
 
 		double alt = asensor->get_currentValue(); // m
 		double pressure = asensor->get_qnh(); // hPa
+		pressure = pressure * 100.0; // convert hPa to Pa for FluidPressure
 		double temp = tsensor->get_currentValue(); // C
 
 		yoctopuce_altimeter::yocto_msg raw_msg;
